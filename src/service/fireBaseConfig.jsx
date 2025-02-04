@@ -5,16 +5,14 @@ import {getFirestore} from "firebase/firestore"
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAIAdGSb25pRsSKFOZzlDASajAPXiFQbqI",
-  authDomain: "trip-project-d594f.firebaseapp.com",
-  projectId: "trip-project-d594f",
-  storageBucket: "trip-project-d594f.appspot.com",
-
-  messagingSenderId: "243319664185",
-  appId: "1:243319664185:web:eb8d820f78f8b49d0b27e8",
-  measurementId: "G-WWC99LRCYY"
+  apiKey:import.meta.env.VITE_API_KEY,
+  authDomain:import.meta.env.VITE_AUTH_DOMAIN,
+  projectId:import.meta.env.VITE_PROJECT_ID,
+  storageBucket:import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId:import.meta.env.VITE_MESSAGE_ID,
+  appId:import.meta.env.VITE_APP_ID,
+  measurementId:import.meta.env.VITE_MEASUREMENT_ID,
 };
-
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 const storage = getStorage(app); // Firebase Storage

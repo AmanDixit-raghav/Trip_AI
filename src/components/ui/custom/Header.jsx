@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dialog.jsx"
 import { FcGoogle } from 'react-icons/fc'
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 function Header() {
   const user=JSON.parse(localStorage.getItem('user'))
    const[dialog,setdialog]=useState(false)
@@ -50,14 +51,16 @@ function Header() {
 
         user?
         <div className='flex items-center gap-3'>
-         <a href='/create-trip'>
-          <Button variant="outline" 
-          className="rounded-full text-lg"> + Create Trip</Button>
-          </a>
-        <a href='/my-trips'>
-          <Button variant="outline" 
-          className="rounded-full text-lg">My Trips</Button>
-          </a>
+      <a href='/create-trip'>
+  <Button variant="outline" className="rounded-full text-lg">
+    + Create Trip
+  </Button>
+</a>
+<a href='/my-trips'>
+  <Button variant="outline" className="rounded-full text-lg">
+    My Trips
+  </Button>
+</a>
           <Popover>
           <PopoverTrigger>
           <img src={user?.picture} className='h-[35px] w-[35px] rounded-full'/>
