@@ -90,9 +90,7 @@ const SaveTrip=async(TripData)=>{
   userEmail:user?.email,
   id:docId
 })
-console.log("VITE_API_KEY:", import.meta.env.VITE_API_KEY);
-console.log("VITE_PROJECT_ID:", import.meta.env.VITE_PROJECT_ID);
-console.log(TripData)
+
 setloading(false)
 navigate('/view-trip/'+docId)
 };
