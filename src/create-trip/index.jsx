@@ -28,7 +28,7 @@ const CreateTrip = () => {
     const navigate=useNavigate()
     const login=useGoogleLogin(
       {
-        onSuccess:(res)=>{console.log(res);GetUserProfile(res)},
+        onSuccess:(res)=>{GetUserProfile(res)},
         onError:(error)=>{console.error(error)}
       }
     )
