@@ -41,7 +41,7 @@ const CreateTrip = () => {
           },
         })
         .then((response) => {
-          console.log("User profile:", response.data);
+         
           localStorage.setItem("user", JSON.stringify(response.data));
           setdialog(false);
           Trip();
@@ -52,7 +52,7 @@ const CreateTrip = () => {
     const Trip=async()=>{
       
       const user = localStorage.getItem("user");
-      console.log("User in localStorage:", user);
+   
       if(!user){
         setdialog(true)
         return;
