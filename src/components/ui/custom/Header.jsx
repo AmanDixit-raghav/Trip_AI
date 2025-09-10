@@ -33,7 +33,7 @@ function Header() {
         },
       })
       .then((response) => {
-        console.log("User profile:", response.data);
+        
         localStorage.setItem("user", JSON.stringify(response.data));
         setdialog(false);
         window.location.reload()
